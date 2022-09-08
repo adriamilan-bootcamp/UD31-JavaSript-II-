@@ -1,16 +1,36 @@
 
 const dateReg = /^[\d]{2}[/][\d]{2}[/][\d]{4}$/
 
-ex1 = "05/04/1982"
-alert(ex1 + " -> " + dateReg.test(ex1))
+date1 = "05/04/1982"
+alert(date1 + " -> " + dateReg.test(date1))
 
-ex1user = prompt("Introduce una fecha")
-alert(ex1user    + " -> " + dateReg.test(ex1user))
+dateUser = prompt("Introduce una fecha")
+alert(dateUser + " -> " + dateReg.test(dateUser))
 
 const emailReg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]{2,3})*$/
 
-ex2 = "adria4milan@gmail.com"
-alert(ex2 + " -> " + emailReg.test(ex2))
+email = "adria4milan@gmail.com"
+alert(email + " -> " + emailReg.test(email))
 
-ex2user = prompt("Introduce un correo electronico")
-alert(ex2user + " -> " + emailReg.test(ex2user))
+emailUser = prompt("Introduce un correo electronico")
+alert(emailUser + " -> " + emailReg.test(emailUser))
+
+function reverseName(name) {
+    name = name.split(" ")
+    name = name.reverse()
+    name = name.join()
+
+    return name
+}
+
+alert(reverseName("pepe viyuela"))
+
+alert(reverseName(prompt("Introduce un nombre")))
+
+const scriptReg = /<script[^]*>.*<\/script[^>]*>/g
+
+script = "<script src='http://mydomain.com/urchin.js'></script>"
+alert(script + " " + scriptReg.test(script))
+
+scriptUser = prompt("Introduce un script")
+alert(scriptUser + " " + scriptReg.test(scriptUser))
